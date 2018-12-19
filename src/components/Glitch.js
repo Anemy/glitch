@@ -6,7 +6,7 @@ import GlitchCanvas from '../canvas/glitch';
 
 const padding = 100;
 
-const updateFreq = 20; // 20 ms (1/50) s
+// const updateFreq = 20; // 20 ms (1/50) s
 
 const textToRender = 'Wearwiki';
 

@@ -1,4 +1,4 @@
-[Dune](https://anemy.github.io/dune) is a generative art project.
+[Glitch](https://anemy.github.io/glitch) is a generative art project.
 
 ## Installation
 

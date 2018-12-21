@@ -1,10 +1,11 @@
 {
   "name": "dunes",
-  "homepage": "http://anemy.github.io/dune",
+  "homepage": "http://anemy.github.io/glitch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "d3": "^5.1.0",
+    "glitch-canvas": "^1.1.5",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

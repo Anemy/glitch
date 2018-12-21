@@ -55,6 +55,10 @@ class Glitch extends Component {
     width: 500
   };
 
+  state = {
+    rendered: false
+  };
+
   componentDidMount() {
     this.refreshGlitch();
   }
@@ -63,14 +67,20 @@ class Glitch extends Component {
     this.refreshGlitch();
   }
 
-  refreshGlitch() {
+  async refreshGlitch() {
     if (this.updateInterval) {
       clearInterval(this.updateInterval);
       this.updateInterval = null;
     }
 
     this.ctx = this.canvasRef.getContext('2d');
-    this.glitch = new GlitchCanvas(this.ctx, textToRender, this.props.width, this.props.height);
+    this.glitch = new GlitchCanvas();
+
+    await this.glitch.glitch(this.ctx, textToRender, this.props.width, this.props.height);
+
+    this.setState({
+      rendered: true
+    });
 
     // this.updateInterval = setInterval(() => {
     //   this.glitch.update(this.ctx);
@@ -84,6 +94,10 @@ class Glitch extends Component {
 
   render() {
     const {
+      rendered
+    } = this.state;
+
+    const {
       width, height
     } = this.props;
 
@@ -93,6 +107,9 @@ class Glitch extends Component {
         height={height - padding}
         ref={ref => this.canvasRef = ref}
         width={width - padding}
+        style={{
+          visibility: rendered ? 'visible' : 'hidden'
+        }}
       />
       // <svg
       //   className="dunes-svg"

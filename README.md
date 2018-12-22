@@ -1,5 +1,7 @@
 [Glitch](https://anemy.github.io/glitch) is a generative art project.
 
+![example glitch](https://i.imgur.com/T0e77YV.png)
+
 ## Installation
 
 Install node js from https://nodejs.org/en/download/
